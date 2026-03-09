@@ -77,19 +77,31 @@ function ensureWorkspace(): void {
   // Initialize progress tracking
   const progressPath = path.join(CLI_WORKSPACE, 'notes', 'progress.json');
   if (!fs.existsSync(progressPath)) {
-    fs.writeFileSync(progressPath, JSON.stringify({ modules: {} }, null, 2), 'utf-8');
+    fs.writeFileSync(
+      progressPath,
+      JSON.stringify({ modules: {} }, null, 2),
+      'utf-8',
+    );
   }
 
   // Initialize KSTAR traces
   const kstarPath = path.join(CLI_WORKSPACE, 'notes', 'kstar-traces.json');
   if (!fs.existsSync(kstarPath)) {
-    fs.writeFileSync(kstarPath, JSON.stringify({ traces: [], skillProfile: {} }, null, 2), 'utf-8');
+    fs.writeFileSync(
+      kstarPath,
+      JSON.stringify({ traces: [], skillProfile: {} }, null, 2),
+      'utf-8',
+    );
   }
 
   // Initialize QMD memory
   const cardsPath = path.join(CLI_WORKSPACE, 'notes', 'memory', 'cards.json');
   if (!fs.existsSync(cardsPath)) {
-    fs.writeFileSync(cardsPath, JSON.stringify({ cards: [] }, null, 2), 'utf-8');
+    fs.writeFileSync(
+      cardsPath,
+      JSON.stringify({ cards: [] }, null, 2),
+      'utf-8',
+    );
   }
 }
 
